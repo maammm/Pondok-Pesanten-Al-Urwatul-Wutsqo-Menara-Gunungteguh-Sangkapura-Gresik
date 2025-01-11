@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prestasi Ma'had</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body onload="tampilkanTanggal()">
+
+<!-- Informasi Bar (Non-Sticky) -->
+<div class="info-bar text-white py-2" style="background-color: #5a3a1b;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <span id="tanggal" class="me-2"></span>
+        </div>
+        <div class="marquee-container">
+            <span class="marquee-text">Selamat datang di Pondok Pesantren Al-Urwatul Wutsqo! Program terbaru kami sudah tersedia.</span>
+        </div>
+        <div class="d-none d-md-block">
+            <a href="https://wa.me/6285236201688" class="text-white me-3">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100069496802535&mibextid=ZbWKwL" class="text-white me-3" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ponpesalurwatulwutsqo?_t=ZS-8spni8VzGYD&_r=1" class="text-white me-3" target="_blank">
+                <i class="bi bi-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/ponpes_alurwatul_wutsqo?igsh=dTB0OXN5bjF0NmEy" class="text-white" target="_blank">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Sticky Header (Navigasi) -->
+<header id="main-navbar" class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo-urwatul-wutsqo-ar.png" alt="Logo" width="50" class="me-3">
+            <div>
+                <span class="top-text">PONDOK PESANTREN AL-URWATUL WUTSQO</span>
+                <span class="bottom-text">MENARA GUNUNGTEGUH SANGKAPURA GRESIK</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profil.html#profil-ma'had">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="informasi.html#informasi">Informasi</a></li>
+                <li class="nav-item"><a class="nav-link" href="program.html#program">Program</a></li>
+                <li class="nav-item"><a class="nav-link" href="tendik.html#tendik">Tendik</a></li>
+                <li class="nav-item"><a class="nav-link" href="prestasi-ma'had.html#prestasi">Prestasi</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<footer class="custom-footer">
+    <div class="footer-container">
+        <!-- Info Kontak -->
+        <div class="footer-section info-kontak">
+            <h3>Info Kontak</h3>
+            <div class="contact-item">
+                <p class="contact-label">Email</p>
+                <p class="contact-detail">ponpesalurwatulwutsqo2016@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <p class="contact-label">No Telepon / WhatsApp</p>
+                <p class="contact-detail">085236201688</p>
+            </div>
+            <div class="contact-item">
+                <p class="contact-label">Alamat</p>
+                <p class="contact-detail">Menara, Gunungteguh, Sangkapura, Bawean, Gresik</p>
+            </div>
+            <div class="contact-item">
+                <p class="contact-label">_________________________</p>
+                <p class="contact-label">Temukan Kami:</p>
+                <div class="social-icons">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/ponpes_alurwatul_wutsqo?igsh=dTB0OXN5bjF0NmEy" target="_blank" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/profile.php?id=100069496802535&mibextid=ZbWKwL" target="_blank" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@ponpesalurwatulwutsqo?_t=ZS-8spni8VzGYD&_r=1" target="_blank" class="social-icon">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>&copy; 2025 Pondok Pesantren Al-Urwatul Wutsqo</p>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

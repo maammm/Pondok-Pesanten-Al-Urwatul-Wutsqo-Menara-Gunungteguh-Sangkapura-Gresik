@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pondok Pesantren Al-Urwatul Wutsqo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body onload="tampilkanTanggal()">
+
+<!-- Informasi Bar (Non-Sticky) -->
+<div class="info-bar text-white py-2" style="background-color: #5a3a1b;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <span id="tanggal" class="me-2"></span>
+        </div>
+        <div class="marquee-container">
+            <span class="marquee-text">Selamat datang di Pondok Pesantren Al-Urwatul Wutsqo! Program terbaru kami sudah tersedia.</span>
+        </div>
+        <div class="d-none d-md-block">
+            <a href="https://wa.me/6285236201688" class="text-white me-3">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100069496802535&mibextid=ZbWKwL" class="text-white me-3" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ponpesalurwatulwutsqo?_t=ZS-8spni8VzGYD&_r=1" class="text-white me-3" target="_blank">
+                <i class="bi bi-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/ponpes_alurwatul_wutsqo?igsh=dTB0OXN5bjF0NmEy" class="text-white" target="_blank">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Sticky Header (Navigasi) -->
+<header id="main-navbar" class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo-urwatul-wutsqo-ar.png" alt="Logo" width="50" class="me-3">
+            <div>
+                <span class="top-text">PONDOK PESANTREN AL-URWATUL WUTSQO</span>
+                <span class="bottom-text">MENARA GUNUNGTEGUH SANGKAPURA GRESIK</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profil.html#profil-ma'had">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="informasi.html#informasi">Informasi</a></li>
+                <li class="nav-item"><a class="nav-link" href="program.html#program">Program</a></li>
+                <li class="nav-item"><a class="nav-link" href="tendik.html#tendik">Tendik</a></li>
+                <li class="nav-item"><a class="nav-link" href="prestasi-ma'had.html#prestasi">Prestasi</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="profile-section py-2 bg-light">
+    <div class="carousel">
+        <div class="carousel-slides">
+            <img src="pondok.jpg" class="carousel-slide" alt="Slide 1">
+            <img src="santri-baru-2023.jpg" class="carousel-slide" alt="Slide 2">
+            <img src="fotbar-haflah-akhirussanah-2023.jpg" class="carousel-slide" alt="Slide 3">
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="carousel-indicators" id="carousel-indicators"></div>
+    </div>
+    <div class="profile-container">
+        <img src="logo.jpg" alt="Profile Picture" class="profile-picture">
+        <h1 class="profile-title">Al-Urwatul Wutsqo</h1>
+    </div>
+</section>
+
+<!-- Info Section -->
+<section class="info-section py-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container-box bg-white shadow-sm p-4 rounded h-100">
+                    <h6 class="text-muted fw-bold mb-3 mt-4">1 November 2024</h6>
+                    <h5 class="fw-bold mb-3">
+                        MSAA UIN Malang Ramaikan Kegiatan Expo Kemandirian Pesantren
+                    </h5>
+                    <p class="text-muted">
+                        MSAA POS – Masih relevan dengan momen hari santri yang dilaksanakan beberapa hari lalu, UIN Malang kembali gelar kegiatan bertajuk Expo Kemandirian Pesantren...
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container-box bg-white shadow-sm p-4 rounded h-100">
+                    <div class="header-box bg-success text-white p-2 rounded mb-3">
+                        <h5 class="text-center fw-bold mb-0">Kegiatan</h5>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-start">
+                            <img src="al-urqo.jpg" alt="Icon 1" class="list-icon me-2">
+                            <span><strong>24 November 2024 -</strong> Maulid Nabi dan Haflah Nishfussanah</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <img src="al-urqo.jpg" alt="Icon 2" class="list-icon me-2">
+                            <span><strong>18-20 November 2024 -</strong> Musabaqoh Nishf Assanah</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <img src="al-urqo.jpg" alt="Icon 3" class="list-icon me-2">
+                            <span><strong>17 November 2024 -</strong> Imtihan Nishfussanah Tahun Akademik</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <img src="al-urqo.jpg" alt="Icon 4" class="list-icon me-2">
+                            <span><strong>2 November 2024 -</strong> PBM (Pelatihan Bahtsul Masail)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="custom-footer">
+    <div class="footer-container">
+        <div class="info-kontak">
+            <h3>Info Kontak</h3>
+            <div class="contact-item">
+                <p class="contact-label">Email</p>
+                <p class="contact-detail">ponpesalurwatulwutsqo2016@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <p class="contact-label">No Telepon / WhatsApp</p>
+                <p class="contact-detail">085236201688</p>
+            </div>
+            <div class="contact-item">
+                <p class="contact-label">Alamat</p>
+                <p class="contact-detail">Menara, Gunungteguh, Sangkapura, Bawean, Gresik</p>
+            </div>
+            <div class="contact-item">
+                <p class="contact-label">Temukan Kami:</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ponpes_alurwatul_wutsqo" target="_blank" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100069496802535" target="_blank" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ponpesalurwatulwutsqo" target="_blank" class="social-icon">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>&copy; 2025 Pondok Pesantren Al-Urwatul Wutsqo</p>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
