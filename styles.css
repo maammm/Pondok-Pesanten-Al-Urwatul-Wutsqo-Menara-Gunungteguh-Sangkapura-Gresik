@@ -40,30 +40,36 @@
 }
 
 .carousel-indicators {
-    position: relative; /* Ganti absolute dengan relative */
-    margin-top: -20px; /* Posisikan di atas container profil */
-    center: 50%;
-    transform: translateX(0%);
+    position: relative;
+    margin-top: -20px;
     display: flex;
-    gap: 5px;
-    z-index: 1; /* Pastikan indikator tidak tertutup elemen lain */
+    justify-content: center;
+    gap: 10px;
+    z-index: 1;
 }
 
 .dot {
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6); /* Efek transparan */
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .dot.active {
-    background-color: black;
+    background-color: #5a3a1b; /* Warna indikator aktif */
+    transform: scale(1.2); /* Efek pembesaran pada indikator aktif */
+}
+
+.dot:hover {
+    background-color: #5a3a1b; /* Warna saat hover */
+    transform: scale(1.3); /* Efek pembesaran saat hover */
 }
 
 .profile-container {
     position: relative;
-    margin: -50px auto 0;
+    margin: 15px auto 0;
     background-color: #ffe4c4;
     width: 100%; /* Lebar penuh */
     max-width: 1115px; /* Sesuaikan dengan lebar total container di info-section */
@@ -81,7 +87,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid #ffe4c4;
     object-fit: cover;
 }
 
@@ -89,7 +95,7 @@
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 /* Media query untuk perangkat dengan lebar maksimal 480px */
@@ -100,6 +106,8 @@
         width: 100%; /* Lebar penuh */
         margin-top: 10px; /* Mengurangi jarak atas agar lebih pas */
         padding: 20px; /* Sesuaikan padding agar lebih ramping */
+        border-radius: 0;
+        box-shadow: none;
     }
 
     /* Container Box */
@@ -128,21 +136,6 @@
     }
     .info-bar .marquee-text {
         font-size: 10px; /* Ukuran teks lebih kecil */
-    }
-
-    /* Logo dan header */
-    .navbar-brand {
-        flex-direction: column; /* Susun logo dan teks secara vertikal */
-        text-align: center;
-    }
-    .navbar-brand img {
-        margin-bottom: 10px; /* Tambahkan jarak bawah */
-    }
-    .navbar-brand .top-text {
-        font-size: 14px; /* Ukuran teks lebih kecil */
-    }
-    .navbar-brand .bottom-text {
-        font-size: 12px; /* Ukuran teks lebih kecil */
     }
 
     /* Navigasi */
@@ -189,11 +182,6 @@
         .navbar-brand img {
             margin-right: 10px; /* Beri jarak antara logo dan teks */
             max-width: 40px; /* Ukuran logo lebih kecil untuk perangkat kecil */
-        }
-        .navbar-brand .top-text,
-        .navbar-brand .bottom-text {
-            font-size: 12px; /* Ukuran teks lebih kecil */
-            text-align: right; /* Teks sejajar ke kanan */
         }
 
         /* Info kontak di tengah */
@@ -298,19 +286,28 @@ header#main-navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Warna teks bawah pada navbar setelah scroll */
-#main-navbar.scrolled .navbar-brand .bottom-text {
-    color: #fff000; /* Warna kuning */
+/* Pastikan font menarik diimpor */
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+/* Navbar-brand default */
+.navbar-brand {
+    font-family: Broadway; /* Font yang menarik */
+    font-size: 24px; /* Ukuran font */
+    font-weight: 600; /* Ketebalan font */
+    color: #5a3a1b; /* Warna coklat (sebelum scroll) */
+    text-transform: lowercase; /* Ubah huruf menjadi kapital kecil */
+    transition: color 0.3s ease-in-out; /* Transisi warna halus */
+    text-decoration: none; /* Hilangkan underline */
+}
+
+/* Navbar-brand saat navbar di-scroll */
+#main-navbar.scrolled .navbar-brand {
+    color: #ffffff; /* Warna putih (sesudah scroll) */
 }
 
 /* Warna teks navbar setelah scroll */
 #main-navbar.scrolled .navbar-nav .nav-link {
     color: #ffffff; /* Teks putih */
-}
-
-
-#main-navbar.scrolled .navbar-brand .top-text {
-    color: #ffffff; /* Teks putih untuk bagian judul */
 }
 
 /* Gaya default untuk teks navbar */
@@ -331,35 +328,8 @@ header#main-navbar {
     transform: scale(1.1); /* Zoom-in */
 }
 
-
 .navbar-nav .nav-link:hover {
     color: #5a3a1b; /* Warna hover */
-}
-
-.navbar-brand .top-text {
-    color: #5a3a1b; /* Warna default teks atas */
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-/* teks disamping logo */
-.navbar-brand span {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.navbar-brand .top-text {
-    color: #793814; /* Warna teks judul */
-    display: block; /* Pastikan teks atas berada di baris pertama */
-}
-
-.navbar-brand .bottom-text {
-    color: #000000; /* Warna teks bawah */
-    font-size: 14px;
-    line-height: 0.5; /* Mengatur jarak antar baris */
-    margin-top: -5px; /* Mengurangi jarak antara teks atas dan bawah */
 }
 
 .navbar-nav .nav-link {
@@ -373,6 +343,33 @@ header#main-navbar {
     transform: scale(1.1); /* Zoom-in */
 }
 
+/* Default nav-link hover (sebelum scroll) */
+.navbar-nav .nav-link {
+    position: relative; /* Dibutuhkan untuk pseudo-element */
+    color: #333333; /* Warna teks default */
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #5a3a1b; /* Warna coklat (default) */
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Garis bawah akan memanjang penuh */
+}
+
+/* Nav-link hover (saat navbar di-scroll) */
+#main-navbar.scrolled .nav-link::after {
+    background-color: #ffffff; /* Warna putih (saat scroll) */
+}
+
+/* info-section */
 .info-section {
     background-color: #f8f9fa;
 }
@@ -430,6 +427,16 @@ header#main-navbar {
 
 .list-unstyled li img {
     margin-right: 10px;
+}
+
+.list-unstyled li a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-unstyled li a:hover {
+    color: #0056b3; /* Warna lebih gelap saat diklik */
+    text-decoration: underline; /* Tambahkan garis bawah saat hover */
 }
 
 /* footer */
@@ -501,17 +508,29 @@ header#main-navbar {
     display: inline-block;
 }
 
+.custom-footer {
+    background-position: bottom;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.custom-footer h3 {
+    font-weight: bold;
+}
+
 .footer-copyright {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     font-size: 10pt;
     width: 100%;
     margin-top: 20px;
     font-family: 'Tahoma', sans-serif; /* Font khusus untuk copyright */
-    margin-bottom: 5pt;
+    margin-bottom: 20px;
 }
+
 /* Warna dan gaya untuk ikon sosial media */
 .social-icons {
     display: flex;
@@ -679,15 +698,6 @@ html {
 }
 .jadwal-sambangan .table {
     margin-top: 20px;
-}
-
-.custom-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-}
-.custom-footer h3 {
-    font-weight: bold;
 }
 
 .jadwal-kegiatan {
