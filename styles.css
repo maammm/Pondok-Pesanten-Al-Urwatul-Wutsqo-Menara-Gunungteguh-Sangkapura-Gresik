@@ -244,7 +244,7 @@
 .marquee-text {
     display: inline-block;
     white-space: nowrap; /* Membuat teks tetap dalam satu baris */
-    animation: marquee 30s linear infinite; /* Memperlambat animasi dengan durasi lebih panjang */
+    animation: marquee 11s linear infinite; /* Memperlambat animasi dengan durasi lebih panjang */
     font-size: 12px;
     color: #ffffff;
 }
