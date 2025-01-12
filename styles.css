@@ -289,7 +289,7 @@ header#main-navbar {
 /* Font Broadway */
 @font-face {
     font-family: 'Broadway';
-    src: url('fonts/Broadway.ttf') format('truetype'); /* Sesuaikan path file */
+    src: url('Font/WalkingBroadwayDEMO.otf') format('truetype'); /* Sesuaikan path file */
     font-weight: normal;
     font-style: normal;
 }
