@@ -286,8 +286,13 @@ header#main-navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Pastikan font menarik diimpor */
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+/* Font Broadway */
+@font-face {
+    font-family: 'Broadway';
+    src: url('fonts/Broadway.ttf') format('truetype'); /* Sesuaikan path file */
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Navbar-brand default */
 .navbar-brand {
