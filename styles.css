@@ -107,7 +107,7 @@
         margin-top: 10px; /* Mengurangi jarak atas agar lebih pas */
         padding: 20px; /* Sesuaikan padding agar lebih ramping */
         border-radius: 0;
-        box-shadow: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     /* Container Box */
