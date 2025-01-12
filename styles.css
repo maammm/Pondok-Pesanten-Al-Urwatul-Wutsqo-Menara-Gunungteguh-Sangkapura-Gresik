@@ -70,7 +70,7 @@
 .profile-container {
     position: relative;
     margin: 15px auto 0;
-    background-color: #ffe4c4;
+    background-color: #ffffff;
     width: 100%; /* Lebar penuh */
     max-width: 1115px; /* Sesuaikan dengan lebar total container di info-section */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -87,7 +87,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 4px solid #ffe4c4;
+    border: 4px solid #ffffff;
     object-fit: cover;
 }
 
