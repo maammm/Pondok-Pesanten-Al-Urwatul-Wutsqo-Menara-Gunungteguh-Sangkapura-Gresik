@@ -71,7 +71,7 @@
     position: relative;
     margin: 15px auto 0;
     background-color: #ffffff;
-    width: 120%; /* Lebar penuh */
+    width: 100%; /* Lebar penuh */
     max-width: 1115px; /* Sesuaikan dengan lebar total container di info-section */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-align: left;
