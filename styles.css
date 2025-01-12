@@ -103,11 +103,11 @@
     /* Profile Container */
     .profile-container {
         max-width: 100%; /* Gunakan lebar penuh */
-        width: 100%; /* Lebar penuh */
+        width: 120%; /* Lebar penuh */
         margin-top: 10px; /* Mengurangi jarak atas agar lebih pas */
         padding: 20px; /* Sesuaikan padding agar lebih ramping */
         border-radius: 0;
-        box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2); /* Hanya bayangan atas dan bawah */
+        box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.2), inset 0 5px 5px rgba(0, 0, 0, 0.2); /* Hanya bayangan atas dan bawah */
     }
 
     /* Container Box */
