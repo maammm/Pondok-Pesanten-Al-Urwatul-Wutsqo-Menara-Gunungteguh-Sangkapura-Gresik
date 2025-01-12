@@ -151,14 +151,14 @@
     /* Footer */
     .footer-container {
         flex-direction: column; /* Elemen disusun vertikal */
-        text-align: center;
+        text-align: left;
     }
     .info-kontak {
         margin: 10px 0; /* Tambahkan jarak antar blok */
         min-width: auto; /* Hilangkan batasan lebar */
     }
     .social-icons {
-        justify-content: center; /* Ikon sosial di tengah */
+        justify-content: left; /* Ikon sosial di tengah */
     }
     .social-icon {
         font-size: 20px; /* Ukuran ikon lebih kecil */
