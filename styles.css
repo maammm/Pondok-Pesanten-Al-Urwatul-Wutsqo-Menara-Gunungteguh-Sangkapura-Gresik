@@ -167,7 +167,7 @@
     @media (max-width: 480px) {
         /* Header: Logo dan teks di kanan, tombol navigasi di kiri */
         .navbar-brand {
-            order: 2; /* Geser ke kanan dengan mengubah urutan */
+            order: 1; /* Geser ke kanan dengan mengubah urutan */
             display: flex;
             align-items: center; /* Pusatkan logo dan teks secara vertikal */
             justify-content: flex-start; /* Logo dan teks berada di kanan */
@@ -175,7 +175,8 @@
         }
 
         .navbar-toggler {
-            margin-right: auto;
+            margin-left: auto; /* Dorong tombol navigasi ke sisi kanan */
+            order: 2; /* Pastikan berada setelah logo */
         }
 
         .navbar-toggler-icon {
