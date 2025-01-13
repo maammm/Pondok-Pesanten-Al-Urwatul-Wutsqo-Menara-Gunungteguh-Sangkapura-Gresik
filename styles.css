@@ -170,12 +170,17 @@
             order: 2; /* Geser ke kanan dengan mengubah urutan */
             display: flex;
             align-items: center; /* Pusatkan logo dan teks secara vertikal */
-            justify-content: flex-end; /* Logo dan teks berada di kanan */
+            justify-content: flex-start; /* Logo dan teks berada di kanan */
             flex-grow: 1;
         }
 
         .navbar-toggler {
             order: 1; /* Geser tombol navigasi ke kiri */
+        }
+
+        .navbar-logo {
+            width: 30px; /* Logo lebih kecil pada perangkat kecil */
+            justify-content: flex-start;
         }
 
         /* Pastikan logo dan teks tidak berantakan */
